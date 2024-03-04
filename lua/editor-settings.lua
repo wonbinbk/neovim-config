@@ -1,11 +1,13 @@
 vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.autoindent = true
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -19,3 +21,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hidden = true
+vim.opt.gcr="a:block-blinkon0"
+vim.opt.listchars="eol:$,tab:>-,trail:~,extends:>,precedes:<"
