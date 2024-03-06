@@ -6,4 +6,3 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 require("lazy-config")
 require("remap")
 require("editor-settings")
-
