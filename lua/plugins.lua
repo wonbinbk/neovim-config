@@ -26,13 +26,6 @@ return {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
-    -- color schemes
-    {
-        "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...
-    },
-    {
-        "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},
-    },
     {
         "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
     },
@@ -47,13 +40,26 @@ return {
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
+    -- {'L3MON4D3/LuaSnip'},
     {
         'numToStr/Comment.nvim',
         opts = {
             -- add any options here
         },
         lazy = false,
-    }
-
+    },
+    -- begin theme
+    {
+        "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...
+    },
+    {
+        "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},
+    },
+    { 
+        "catppuccin/nvim", name = "catppuccin", priority = 1000 
+    },
+    {
+        "rebelot/kanagawa.nvim", lazy = false, priority = 1000, opts = {},
+    },
+    -- end theme
 }
