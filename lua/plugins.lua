@@ -48,6 +48,16 @@ return {
         },
         lazy = false,
     },
+    {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+    },
     -- begin theme
     {
         "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...
@@ -60,6 +70,11 @@ return {
     },
     {
         "rebelot/kanagawa.nvim", lazy = false, priority = 1000, opts = {},
+    },
+    { 'ribru17/bamboo.nvim', lazy = false, priority = 1000, config = function()
+        require('bamboo').setup {
+            -- optional configuration here
+        } require('bamboo').load() end,
     },
     -- end theme
 }

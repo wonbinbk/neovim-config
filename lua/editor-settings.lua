@@ -27,4 +27,4 @@ vim.opt.hidden = true
 -- make the cursor not blinking
 vim.opt.gcr="a:block-blinkon0"
 -- display white space characters
-vim.opt.listchars="eol:$,tab:>-,trail:~,extends:>,precedes:<"
+vim.o.listchars = "tab:▸-,lead:·,trail:~,extends:>,precedes:<,leadmultispace:...⏐"
