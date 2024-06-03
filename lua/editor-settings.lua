@@ -24,6 +24,7 @@ vim.opt.colorcolumn = "120"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hidden = true
+vim.lsp.set_log_level("off")
 -- make the cursor not blinking
 vim.opt.gcr="a:block-blinkon0"
 -- display white space characters

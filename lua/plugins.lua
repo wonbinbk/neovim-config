@@ -17,8 +17,15 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             -- calling `setup` is optional for customization
-            require("fzf-lua").setup({})
-
+            require("fzf-lua").setup({
+                actions = {
+                    files = {
+                        -- open selected files in buffers
+                        -- the default is `file_edit_or_qf` which sending multiple files to the quickfix list
+                        ["default"] = require("fzf-lua.actions").file_edit,
+                    }
+                }
+            })
         end
     },
     -- lualine for quick statusline display
@@ -32,6 +39,7 @@ return {
     {
         "tpope/vim-fugitive"
     },
+    { 'RaafatTurki/hex.nvim' },
     -- LSP-zero from VonHeikemen/lsp-zero.nvim
     -- Uncomment the two plugins below if you want to manage the language servers from neovim
     {'williamboman/mason.nvim'},
@@ -65,8 +73,8 @@ return {
     {
         "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},
     },
-    { 
-        "catppuccin/nvim", name = "catppuccin", priority = 1000 
+    {
+        "catppuccin/nvim", name = "catppuccin", priority = 1000
     },
     {
         "rebelot/kanagawa.nvim", lazy = false, priority = 1000, opts = {},
@@ -76,5 +84,7 @@ return {
             -- optional configuration here
         } require('bamboo').load() end,
     },
+    { 'projekt0n/github-nvim-theme' },
+    { 'HoNamDuong/hybrid.nvim' }
     -- end theme
 }
