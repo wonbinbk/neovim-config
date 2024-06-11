@@ -7,6 +7,12 @@ vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>", {})
 vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>", {})
 vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>", {})
 
+-- moving to window number. The window number is displayed by lualine
+for i = 1, 6 do
+    local lhs = "<leader>" .. i
+    local rhs = i .. "<c-w>w"
+    vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i})
+end
 --------------------------
 -- in tabvsspace.lua
 -- F2 to swap
