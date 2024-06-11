@@ -15,3 +15,4 @@ lsp_config.bashls.setup{}
 -- disable lsp diagnostic by override this with a do-nothing function
 -- uncomment if we want to disable diagnostics
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+require("mason").setup()
