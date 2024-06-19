@@ -26,9 +26,8 @@ vim.keymap.set("n", "<F6>", "<cmd>%s/\\s\\+$//e<CR>", { silent = true })
 -- F8 to switch source header
 vim.keymap.set("n", "<F8>", "<cmd>ClangdSwitchSourceHeader<CR>", { silent = true })
 vim.keymap.set("n", "<F12>", function()
-    if vim.o.background == "light" then
-        vim.o.background = "dark"
-    else
-        vim.o.background = "light"
-    end
-end, {silent=true, noremap=true, desc="Toggle dark / light mode"})
+    local bg = vim.o.background
+    vim.o.background = bg == "dark" and "light" or "dark"
+
+    print("Using", vim.g.colors_name, vim.o.background)
+end, {silent=true, noremap=true, desc="Toggle between a dark and light theme"})
