@@ -66,6 +66,14 @@ return {
         })
     end
     },
+    {
+      "folke/zen-mode.nvim",
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- from : https://github.com/folke/zen-mode.nvim
+      }
+    },
     -- begin theme
     {
         "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...

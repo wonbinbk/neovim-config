@@ -1,5 +1,7 @@
 -- tab and spaces
-vim.keymap.set("n", "<F2>", "<cmd>set wrap!<CR>", {})
+vim.keymap.set("n", "<F11>", "<cmd>set wrap!<CR>", {})
+--------------------------
+-- in tabvsspace.lua
 -- toggle expandtab
 vim.keymap.set("n", "<F9>", function()
     local expandtab = vim.opt.expandtab:get()
