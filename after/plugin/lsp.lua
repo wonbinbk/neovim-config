@@ -5,7 +5,7 @@ lsp_zero.on_attach(function(client, bufnr)
     -- to learn the available actions
     lsp_zero.default_keymaps({
         buffer = bufnr,
-        preserve_mappings = false
+        exclude = {'F4'}
     })
 end)
 

@@ -7,4 +7,5 @@ vim.keymap.set("n", "<leader>l", "<cmd>lua require('fzf-lua').live_grep_glob()<C
 vim.keymap.set("n", "<leader>g", "<cmd>lua require('fzf-lua').grep_cword()<CR>", {})
 vim.keymap.set("n", "<F1>", "<cmd>lua require('fzf-lua').help_tags()<CR>", {})
 vim.keymap.set("n", "<leader>r", "<cmd>lua require('fzf-lua').resume()<CR>", {})
+vim.keymap.set("n", "<F4>", "<cmd>lua require('fzf-lua').lsp_finder()<CR>", {})
 
