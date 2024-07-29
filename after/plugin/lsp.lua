@@ -9,6 +9,13 @@ lsp_zero.on_attach(function(client, bufnr)
     })
 end)
 
+lsp_zero.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+
 local lsp_config = require('lspconfig')
 lsp_config.clangd.setup{}
 lsp_config.cmake.setup{}
