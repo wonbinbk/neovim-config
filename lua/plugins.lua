@@ -87,7 +87,7 @@ return {
     -- { 'ray-x/navigator.lua' },
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    -- {'L3MON4D3/LuaSnip'},
+    {'L3MON4D3/LuaSnip'},
     {
         'numToStr/Comment.nvim',
         opts = {

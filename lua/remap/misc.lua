@@ -41,3 +41,7 @@ vim.keymap.set("n", "<F12>", function()
     vim.o.background = bg == "dark" and "light" or "dark"
     print("Using", vim.g.colors_name, vim.o.background)
 end, {silent=true, noremap=true, desc="Toggle between a dark and light theme"})
+
+vim.keymap.set("n", "<leader>d", function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, {silent=true, noremap=true, desc="Toggle diagnostic"})
