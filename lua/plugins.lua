@@ -114,6 +114,21 @@ return {
         -- from : https://github.com/folke/zen-mode.nvim
       }
     },
+    {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup()
+        end,
+    },
+    {
+        'stevearc/oil.nvim',
+        ---@module 'oil'
+        ---@type oil.SetupOpts
+        opts = {},
+        -- Optional dependencies
+        dependencies = { { "echasnovski/mini.icons", opts = {} } },
+        -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+    },
     -- begin theme
     {
         "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...

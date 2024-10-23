@@ -45,3 +45,5 @@ end, {silent=true, noremap=true, desc="Toggle between a dark and light theme"})
 vim.keymap.set("n", "<leader>d", function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, {silent=true, noremap=true, desc="Toggle diagnostic"})
+-- use Oil for file tree
+vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
