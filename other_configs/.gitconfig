@@ -1,0 +1,63 @@
+[user]
+	name = username # edit username here
+	email = email   # edit email here
+[core]
+	autocrlf = input
+	editor = nvim   # need to install neovim
+	pager = delta   # need to install delta
+	fsmonitor = true
+[alias]
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgsimple = log --pretty=format:'%h - %s' --abbrev-commit
+	ol = log --color --graph --abbrev-commit --pretty=oneline
+	su = submodule update --recursive --force
+	ss = submodule sync --recursive
+	del = branch -D
+	co = checkout
+	cob = checkout -b
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	fe = fetch upstream
+	fs = fetch upstream sequoia5:sequoia5
+	cp = cherry-pick -x
+	st = status
+	cm = commit
+	gt = tag --sort=-refname -l
+	tags = "log --no-walk --tags --oneline"
+	cl = clone --recursive
+	bl = blame
+	ad = add
+	staash = stash --all
+	pushf = push --force-with-lease
+[color]
+	ui = auto
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = master
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[fetch]
+	writeCommitGraph = true
+
+[interactive]
+    # Need to install delta, it's a better diff tool
+	diffFilter = delta --color-only --true-color always
+
+[delta]
+    # Need to install delta, it's a better diff tool
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	side-by-side = true 
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
