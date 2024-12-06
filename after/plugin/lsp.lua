@@ -23,6 +23,8 @@ lsp_config.lua_ls.setup{}
 lsp_config.bashls.setup{}
 lsp_config.julials.setup{}
 lsp_config.yamlls.setup{}
+lsp_config.rust_analyzer.setup{}
+lsp_config.gopls.setup{}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -36,4 +38,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 -- uncomment if we want to disable diagnostics
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = { 'rust_analyzer' },
+    handlers = {
+        function(server_name)
+            require('lspconfig')[server_name].setup({})
+        end,
+    }
+})
