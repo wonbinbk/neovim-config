@@ -30,3 +30,4 @@ vim.opt.gcr="a:block-blinkon0"
 -- display white space characters
 vim.o.listchars = "tab:▸-,lead:·,trail:~,extends:>,precedes:<,leadmultispace:...⏐"
 vim.g.editorconfig = false
+vim.opt.wrap=true
