@@ -1,5 +1,5 @@
 -- Save the last used colorscheme in a file on disk and reload it the next time
-local colorscheme_file = vim.fn.stdpath("config") .. "/after/plugin/last_colorscheme.lua"
+local colorscheme_file = vim.fn.stdpath("config") .. "/lua/user_defined/last_colorscheme.lua"
 local function save_colorscheme(scheme)
     local file = io.open(colorscheme_file, "w")
     if file then
