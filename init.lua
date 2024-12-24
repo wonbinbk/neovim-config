@@ -5,3 +5,4 @@ vim.g.mapleader = " "
 require("lazy-config")
 require("remap")
 require("editor-settings")
+require("user_defined")
