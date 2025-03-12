@@ -5,8 +5,7 @@ return {
     },
     -- nvim-treesitter
     {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = true,
+        "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
     },
     {
         "junegunn/fzf", dir = "~/.fzf", build = "./install --all"
@@ -26,7 +25,7 @@ return {
                     }
                 }
             })
-        end
+        end,
     },
     {
        "folke/trouble.nvim",
@@ -68,10 +67,7 @@ return {
     -- lualine for quick statusline display
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-    {
-        "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
     {
         "tpope/vim-fugitive"
@@ -82,7 +78,7 @@ return {
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    { 'neovim/nvim-lspconfig' },
+    { 'neovim/nvim-lspconfig'},
     -- { 'ray-x/guihua.lua', build = "cd lua/fzy && make"},
     -- { 'ray-x/navigator.lua' },
     {'hrsh7th/cmp-nvim-lsp'},
