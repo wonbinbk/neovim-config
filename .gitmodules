@@ -1,0 +1,3 @@
+[submodule "other_configs/alacritty/themes"]
+	path = other_configs/alacritty/themes
+	url = git@github.com:alacritty/alacritty-theme.git
