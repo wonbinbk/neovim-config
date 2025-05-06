@@ -1,3 +1,6 @@
 [submodule "other_configs/alacritty/themes"]
 	path = other_configs/alacritty/themes
 	url = git@github.com:alacritty/alacritty-theme.git
+[submodule "other_configs/zsh_custom/plugins/fzf-zsh-plugin"]
+	path = other_configs/zsh_custom/plugins/fzf-zsh-plugin
+	url = https://github.com/unixorn/fzf-zsh-plugin.git
