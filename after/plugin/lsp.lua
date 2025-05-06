@@ -16,15 +16,26 @@ lsp_zero.set_sign_icons({
   info = '»'
 })
 
-local lsp_config = require('lspconfig')
-lsp_config.clangd.setup{}
-lsp_config.pyright.setup{}
-lsp_config.lua_ls.setup{}
-lsp_config.bashls.setup{}
-lsp_config.julials.setup{}
-lsp_config.yamlls.setup{}
-lsp_config.rust_analyzer.setup{}
-lsp_config.gopls.setup{}
+-- Legacy way in nvim < 0.11
+-- local lsp_config = require('lspconfig')
+-- lsp_config.clangd.setup{}
+-- lsp_config.pyright.setup{}
+-- lsp_config.lua_ls.setup{}
+-- lsp_config.bashls.setup{}
+-- lsp_config.julials.setup{}
+-- lsp_config.yamlls.setup{}
+-- lsp_config.rust_analyzer.setup{}
+-- lsp_config.gopls.setup{}
+
+-- New supported way in nvim 0.11+
+vim.lsp.enable('bashls')
+vim.lsp.enable('pyright')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('clangd')
+vim.lsp.enable('yamlls')
+vim.lsp.enable('julials')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('gopls')
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

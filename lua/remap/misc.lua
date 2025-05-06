@@ -31,7 +31,7 @@ vim.keymap.set("n", "<F7>", function()
     })
 end, { silent = true })
 -- F8 to switch source header
-vim.keymap.set("n", "<F8>", "<cmd>ClangdSwitchSourceHeader<CR>", { silent = true })
+vim.keymap.set("n", "<F8>", "<cmd>LspClangdSwitchSourceHeader<CR>", { silent = true })
 -- F9 to switch tab/space
 -- F10 to retab on visual chosen
 -- F11 to wrap
