@@ -1,15 +1,5 @@
-
 [env]
 TERM = "xterm-256color"
-
-[window]
-decorations = "none"
-dynamic_padding = true
-opacity = 0.96
-
-[scrolling]
-history = 100000
-multiplier = 5
 
 [font]
 size = 12.0
@@ -31,5 +21,17 @@ family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [general]
+import = [
+    "/home/phanthai/.config/alacritty/themes/themes/github_dark_dimmed.toml",
+    "/home/phanthai/open_source/neovim-config/other_configs/alacritty/themes/themes/github_dark_tritanopia.toml",
+]
 live_config_reload = true
-import = ["~/.config/alacritty/themes/themes/gruvbox_material_medium_light.toml"]
+
+[scrolling]
+history = 100000
+multiplier = 5
+
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 0.96
