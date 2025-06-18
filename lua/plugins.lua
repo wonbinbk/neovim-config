@@ -125,6 +125,7 @@ return {
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
         -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
     },
+    { 'stevearc/conform.nvim', opts = {}, },
     -- begin theme
     {
         "sainnhe/gruvbox-material", priority = 1000 , config = true, opts = ...
