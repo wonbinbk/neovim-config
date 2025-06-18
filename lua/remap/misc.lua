@@ -47,3 +47,7 @@ vim.keymap.set("n", "<leader>d", function()
 end, {silent=true, noremap=true, desc="Toggle diagnostic"})
 -- use Oil for file tree
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- Format code using conform
+vim.keymap.set("n", "<leader>gq", function()
+    require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "Format file" })
