@@ -34,6 +34,9 @@ hide_when_typing = true
 history = 100000
 multiplier = 5
 
+[terminal]
+shell = "/home/thai/.config/alacritty/scripts/start_tmux.sh"
+
 [window]
 decorations = "none"
 dynamic_padding = true
