@@ -72,6 +72,13 @@ return {
     {
         "tpope/vim-fugitive"
     },
+    {
+      "NeogitOrg/neogit",
+      dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+        "sindrets/diffview.nvim",        -- optional - Diff integration
+      },
+    },
     { 'RaafatTurki/hex.nvim' },
     -- LSP-zero from VonHeikemen/lsp-zero.nvim
     -- Uncomment the two plugins below if you want to manage the language servers from neovim
@@ -109,6 +116,9 @@ return {
         -- or leave it empty to use the default settings
         -- from : https://github.com/folke/zen-mode.nvim
       }
+    },
+    {
+        "github/copilot.vim"
     },
     {
         "max397574/better-escape.nvim",

@@ -20,7 +20,7 @@ vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hidden = true
@@ -29,5 +29,5 @@ vim.lsp.set_log_level("off")
 vim.opt.gcr="a:block-blinkon0"
 -- display white space characters
 vim.o.listchars = "tab:▸-,lead:·,trail:~,extends:>,precedes:<,leadmultispace:...⏐"
-vim.g.editorconfig = false
+vim.g.editorconfig = true
 vim.opt.wrap=true

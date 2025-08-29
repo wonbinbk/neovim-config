@@ -10,3 +10,7 @@ require("conform").setup({
     --     timeout_ms = 1000,
     -- },
 })
+
+vim.keymap.set("", "<leader>f", function()
+    require("conform").format({ async = true, lsp_fallback = true })
+end)

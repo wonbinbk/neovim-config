@@ -26,7 +26,8 @@ vim.keymap.set("n", "<F6>", "<cmd>%s/\\s\\+$//e<CR>", { silent = true })
 vim.keymap.set("n", "<F7>", function()
     require("zen-mode").toggle({
         window = {
-            width = .80 -- width will be 85% of the editor width
+            backdrop = 0.85,
+            width = 120
         }
     })
 end, { silent = true })

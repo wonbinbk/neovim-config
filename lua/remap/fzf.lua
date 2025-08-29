@@ -4,7 +4,7 @@ vim.keymap.set("n", "<C-p>", "<cmd>lua require('fzf-lua').git_files()<CR>", { si
 vim.keymap.set("n", "<space>b", "<cmd>lua require('fzf-lua').buffers()<CR>", {})
 vim.keymap.set("n", "<C-space>", "<cmd>lua require('fzf-lua').buffers()<CR>", {})
 vim.keymap.set("n", "<leader>k", "<cmd>lua require('fzf-lua').builtin()<CR>", {})
-vim.keymap.set("n", "<leader>l", "<cmd>lua require('fzf-lua').live_grep_glob()<CR>", {})
+vim.keymap.set("n", "<leader>l", "<cmd>lua require('fzf-lua').live_grep()<CR>", {})
 vim.keymap.set("n", "<leader>g", "<cmd>lua require('fzf-lua').grep_cword()<CR>", {})
 vim.keymap.set("n", "<F1>", "<cmd>lua require('fzf-lua').help_tags()<CR>", {})
 vim.keymap.set("n", "<leader>r", "<cmd>lua require('fzf-lua').resume()<CR>", {})
